@@ -1,0 +1,21 @@
+body{
+    background-image: url(../images/px_by_Gre3g_@2X.png);
+    color: goldenrod;
+}
+
+#container{
+    justify-content: center;
+    margin-left: 10rem;
+
+}
+
+#quiz-container{
+    font-size: 2rem;
+    background-color: maroon;
+    display: flex;
+}
+
+#submit{
+    background-color: ghostwhite;
+    color: goldenrod;
+}

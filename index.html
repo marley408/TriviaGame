@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
     <div id "container">
-        <h1>Harry Potter Quiz</h1>
-        <button id="start">Start</button>
+        <div id="startPage">
+            <h1>Harry Potter Quiz</h1>
+            <button id="start">Start</button>
+        </div>
+        
+        <!-- <a><img type="image" class="trigger" id="start" src="assets/images/express.png" width="200rem" height="200rem" alt="Hogwarts Express"  /></a>  -->
+
        <section style="display:none;" id="quiz-container">
             <div>
                 <p>Time Remaining: <span id="timeLeft"></span></p>
@@ -50,9 +58,11 @@
                     <label for="answer_12">Crookshanks</label>
                     
                 </fieldset>
-                <button type="submit" id="submit">Submit</button>
+                <!-- <button type="submit" id="submit">Submit</button> -->
+                <button type="submit" id="submit" class="btn btn-default">Submit</button>
+
             </form>
-       </section>
+        </section>
     </div>
 
 

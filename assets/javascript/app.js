@@ -4,12 +4,16 @@ $(document).ready(function() {
     const $timeLeft = $('#timeLeft');
     const $quiz = $('#quiz');
 
+    // above are the const variables that hold the elements of the html page
+
     let timeAllowed = 60; // 1 minute
     let timer;
     let correctAmount = 0;
     let incorrectAmount = 0;
     let unAnsweredAmount = 0;
 
+
+    // here we create an object holding each question and their correct answers. this is used for the comparison function
     const correctAnswers = { 
         "question_1": "Azkaban",
         "question_2": "Bill",
@@ -19,6 +23,8 @@ $(document).ready(function() {
     // Set initial text of time left paragraph
     $timeLeft.text(timeAllowed);
 
+
+    // here we wrtie the function that runs once the start button is clicked. we prevent default browser behavior so page does not refresh 
     $startButton.on('click', function(e) {
         e.preventDefault();
 
@@ -35,6 +41,7 @@ $(document).ready(function() {
         }, 1000);
     });
 
+    // here is the function that runs once the quiz is submitted.  
     $quiz.on('submit', function(e) {
         e.preventDefault();
         clearInterval(timer);
