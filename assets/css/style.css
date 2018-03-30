@@ -1,21 +1,74 @@
 body{
     background-image: url(../images/px_by_Gre3g_@2X.png);
     color: goldenrod;
+    box-sizing: border-box;
 }
 
-#container{
+#startPage{
+    /* display: flex; */
+    background-color: maroon;
+    /* width: 33.3%; */
+    margin: 25%;
+    padding: 10rem;
+    font-family: 'Marck Script', cursive;
+    font-family: 'Handlee', cursive;
+}
+
+h1{
+    display: flex;
     justify-content: center;
-    margin-left: 10rem;
+    align-self: center;
+    /* width: 10rem;
+    height: 10rem; */
+    margin-bottom: 5rem;
+    
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 
 }
 
 #quiz-container{
-    font-size: 2rem;
+    /* font-size: 4rem; */
     background-color: maroon;
     display: flex;
+    margin: 10%;
+    padding: 2rem;
+    justify-content: center;
+    font-family: 'Marck Script', cursive;
+    font-family: 'Handlee', cursive;
+
+}
+
+p{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+label{
+    font-size: 2rem;
+}
+
+input[type=radio]{
+    padding: 5rem;
 }
 
 #submit{
     background-color: ghostwhite;
     color: goldenrod;
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+}
+
+.correctAmount{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    align-self: center;
+
+
 }

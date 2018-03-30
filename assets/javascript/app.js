@@ -3,6 +3,8 @@ $(document).ready(function() {
     const $quizContainer = $('#quiz-container');
     const $timeLeft = $('#timeLeft');
     const $quiz = $('#quiz');
+    const $startPage = $('#startPage')
+
 
     // above are the const variables that hold the elements of the html page
 
@@ -29,6 +31,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         $startButton.hide();
+        $startPage.hide()
         $quizContainer.css({ display: 'block' });
 
         timer = setInterval(function() {
@@ -36,7 +39,7 @@ $(document).ready(function() {
             $timeLeft.text(timeAllowed);
 
             if (timeAllowed === 0) {
-                clearInterval(timer);
+                clearInterval(timer);                
             }
         }, 1000);
     });
@@ -50,7 +53,8 @@ $(document).ready(function() {
 
         // Get users answers from quiz
         const results = $quiz.serializeArray();
-
+        
+    
         unAnsweredAmount = ( results.length > 0 && results.length === 3 ) ? 0 : 3 - results.length;
 
         console.log(unAnsweredAmount);
@@ -70,12 +74,13 @@ $(document).ready(function() {
             }
             
         });
-
+    
+    
         $('<div><h1>Results</h1></div>').appendTo($quizContainer);
 
         let $correctAmountElement = $('<div class="correctAmount">');
-        let $incorrectAmountElement = $('<div>');
-        let $unansweredAmountElement = $('<div>');
+        let $incorrectAmountElement = $('<div class="correctAmount">');
+        let $unansweredAmountElement = $('<div class="correctAmount">');
 
         $correctAmountElement.text('Correct Answers: ' + correctAmount);
         $correctAmountElement.appendTo($quizContainer);
